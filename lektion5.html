@@ -1,0 +1,64 @@
+<html>
+<head>
+    <style>
+    body {
+        background: #333;
+    }
+    #output {
+        width: 500px;
+        height: 500px;
+        background: #eee;
+        border: 10px solid #555;
+        border-radius: 5px;;
+        margin: 40px auto;
+        padding: 15px;
+        font-family: monospace;
+        white-space: pre;
+    }
+    </style>   
+</head>
+<body>
+<div id="output"></div>
+<script>
+    // Skriv koden här //
+    let number1 = 10;
+    let number2 = 3;
+    let calculation = "ad";
+
+    calculate(600, "add", 500);
+    
+    
+    function calculate(number1, calculation, number2){
+        switch(calculation){
+        case "add":
+        case "ad": 
+            print(number1 + number2);
+            break;
+        case "substract": 
+            print(number1 - number2);
+            break;
+        case "multiply": 
+            print(number1 * number2);
+            break;
+        case "divide": 
+            print(number1 / number2);
+            break;
+        }   
+    }
+
+
+    // Färdiga funktioner som förenklar //
+    function print(text){
+        document.getElementById("output").innerHTML += text;
+    }
+
+    function newLine(){
+        document.getElementById("output").innerHTML += "\n";
+    }
+
+    function clear(){
+        document.getElementById("output").innerHTML = "";
+    }
+</script>
+</body>
+</html>

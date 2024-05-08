@@ -1,0 +1,62 @@
+<body>
+    <input id="input">
+    <button id="button">Kör!</button>
+    <button id="clearoutput">Töm allt!</button>
+    <div id="output_chat" style="border: 1px solid green"></div>
+    <div id="output" style="border: 1px solid black"></div>
+    
+    
+    <script>
+        // GLOBALER //
+        OUTPUT = document.getElementById("output");
+        BUTTON = document.getElementById("button");
+        
+
+        // KNAPPARNAS FUNKTION //
+        BUTTON.onclick = printInput;
+        function printInput(){
+            document.getElementById("output_chat").innerHTML += document.getElementById("input").value;
+            document.getElementById("output_chat").innerHTML += "<br>";
+            document.getElementById("input").value = "";
+        }
+
+        document.getElementById("clearoutput").onclick = function(){
+            document.getElementById("output_chat").innerHTML = "";
+        }
+
+
+        // PROGRAMMET //
+
+        
+        for(let i = 10; i>=0; i--){
+
+            if(i % 2 == 0){
+                
+                for(j = 1; j<=i; j++){
+                    print("X");
+                }
+
+            }else{
+
+                for(j = 1; j<=i; j++){
+                    print("O");
+                }
+                
+            }
+
+            newLine();
+            
+        }
+        
+
+
+        // FUNKTIONER //
+        function print(text){
+            OUTPUT.innerHTML += text;
+        }
+
+        function newLine(){
+            OUTPUT.innerHTML += "<br>";
+        }
+    </script>
+</body>
